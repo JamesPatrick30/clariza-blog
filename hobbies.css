@@ -1,0 +1,130 @@
+html{
+    scroll-snap-type: y mandatory;
+}
+body {
+    background-color: #FFC5D3;
+    margin: 0;
+    padding: 0;
+    /* Enable vertical scrolling with snap */
+    scroll-behavior: smooth;
+    height: 100vh;
+    scrollbar-width: none;
+}
+
+main, body {
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;        /* Stack children vertically */
+    justify-content: flex-start;   
+    align-items: center;           /* Center horizontally */
+    width: 100vw;
+    min-height: 100vh;
+    width: 100%;
+    min-height: 100vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+   
+    /* align-items: center; */
+    /* justify-content: center; */
+    scroll-snap-align: start;
+}
+nav {
+    position: absolute; /* or fixed if you want it always visible */
+    top: 0;
+    right: 0;
+    padding: 10px 20px;
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    /* gap: 10px; */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    padding: 10px 20px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+nav ul li .selected {
+    color: #ff4d4d;
+}
+
+.containerfirst{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 80vh;
+    padding: 20px;
+    gap: 20px; 
+}
+.containerfirst .item{
+        flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    justify-content: flex-end; /* Align content to the bottom */
+    border-radius: 10px;
+    text-align: start;
+
+    background-color: #ffffff;
+
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 80vh;
+    padding: 20px;
+    gap: 20px; 
+}
+.container .item{
+        flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    justify-content: flex-end; /* Align content to the bottom */
+    border-radius: 10px;
+    text-align: start;
+
+    background-color: #ffffff;
+
+}
+/* .container .item h1{
+    position: relative;
+    margin-top: 50px;
+}
+.container .item .space{
+    height: 30%;
+} */
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+    width: 300px;   /* Set your desired width */
+    height: auto;  
+    position: relative;
+}
