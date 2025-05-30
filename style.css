@@ -1,0 +1,63 @@
+body{
+    background-color: #FFC5D3;
+}
+nav ul{
+    right: 100%;
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+nav ul li{
+    padding: 10px 20px;
+    list-style: none;
+    color: white;
+}
+
+nav{
+    margin-top: auto;
+    align-items: end;
+ 
+}
+nav ul li .select{
+    color: white;
+}
+nav ul li .selected{
+    color: rgb(236, 35, 35);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 80vh;
+    padding: 20px;
+    gap: 20px; 
+}
+.container .item{
+        flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    justify-content: flex-end; /* Align content to the bottom */
+    border-radius: 10px;
+    text-align: start;
+
+
+}
+.container .item h1{
+    position: relative;
+    margin-top: 50px;
+}
+.container .item .space{
+    height: 30%;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+    width: 300px;   /* Set your desired width */
+    height: auto;  
+    position: relative;
+}
