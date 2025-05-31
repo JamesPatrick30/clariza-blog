@@ -25,11 +25,30 @@
             <div class="containerfirst">
                 
                 <div class="item">
-                    <h1>Hobbies</h1>
-                    <p>Here are some of my hobbies that I enjoy doing in my free time.</p>
+                    <div class="text">
+                     
+                            <h1>🏐 My Love for Volleyball</h1>
+                            <p>Playing volleyball isn’t just a hobby for me—it’s a feeling. Every game I play with my friends is filled with laughter, teamwork, and memories that I’ll always treasure. It’s more than just chasing the ball or scoring points; it’s the bond we share on and off the court. My teammates became my closest friends, and eventually, like sisters. They’re the reason I fell in love with the sport even more. Win or lose, what matters most is that we play with heart—together.</p>
+                        
+                    </div>
+                </div>
+                <div class="item" >
+                    <img src="vollyball.jpg" alt="" >
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="container">
+                
+                <div class="item">
+                    <div class="text">
+                        <h2>📚 My Love for Reading</h2>
+                        <p>Reading has always been my little escape—a way to explore new worlds, feel deep emotions, and understand different lives without ever leaving my room. Whether it’s a novel, a poem, or even just a short story, books have a way of making me feel seen, inspired, and understood. I love how a few words on a page can spark my imagination or comfort me on a bad day. Each book I read teaches me something new, and sometimes, it even pushes me to write my own thoughts, dreams, and maybe—one day—a story of my own.</p>
+                    </div>
                 </div>
                 <div class="item">
-                    <img src="vollyball.jpg" alt="">
+                    <img src="book.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -37,20 +56,13 @@
             <div class="container">
                 
                 <div class="item">
-                    <h1>1</h1>
+                    <div class="text">
+                        <h2>🚗 My Love for Driving</h2>
+                        <p> Driving gives me a sense of freedom that’s hard to explain. It’s not just about getting from one place to another—it’s about the peace I feel when I’m on the road, music playing, and my thoughts wandering. Whether I’m alone or with friends, I enjoy the quiet moments during long drives or the laughs during spontaneous road trips. Driving helps me clear my mind, explore new places, and sometimes, it’s my escape when life feels overwhelming. It’s one of the simple things that makes me feel alive and in control.</p>
+                    </div>
                 </div>
                 <div class="item">
-                    
-                </div>
-            </div>
-        <div class="section">
-            <div class="container">
-                
-                <div class="item">
-                    <h1>1</h1>
-                </div>
-                <div class="item">
-                    
+                    <img src="driving.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -59,5 +71,24 @@
         
     <!-- etc. -->
     </main>
+    <script>
+        const sections = document.querySelectorAll('.section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => observer.observe(section));
+        </script>
+
+
 </body>
 </html>

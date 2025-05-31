@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact Me</title>
+    <!-- Place this in your <head> -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=call" /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+</head>
+<body>
+    <nav>
+        <ul>
+             <li><a href="index.html" class="select">HOME</a></li>
+            <li><a href="about.html" class="select">ABOUT</a></li>
+            <li><a href="hobbies.html"class="select">HOBBIES</a></li>
+            <li><a href="contact.html"class="selected">CONTACT</a></li>
+        </ul>
+    </nav>
+    <div class="topcontent">
+        <h1>Get In Touch</h1>
+        <p>Whether you want to connect, share thoughts, give feedback, or simply say hi—my inbox is always open. Don’t hesitate to reach out! I’m always up for a good conversation, collaboration, or just making new friends.</p>
+    </div>
+    <div class="container">
+        <div class="contact">
+            <h4 style="text-align: center;">You can contact me through:</h4>
+            <p>Feel free to message me via email or reach out on Facebook and Instagram. I'm always open for a chat!</p>
+            <ul>
+                <li><span class="material-symbols-outlined">mail</span> Email : Clarizaramos94@gmail.com</li>
+                <li><span class="material-symbols-outlined">call</span>Phone : 0936 330 0400</li>
+               
+            </ul>
+            
+       
+        </div>
+        <div class="emailme">
+            <div class="container">
+                <div class="item">
+                    <label for="">Your Name</label><br>
+                    <input type="text" placeholder="Enter your name">
+                </div>
+                <div class="item">
+                    <label for="">Your Email</label><br>
+                    <input type="text" placeholder="Enter your name">
+                </div>
+            </div>
+            <div class="inputbox">
+                <label for="">Your Subject</label>
+                <input class="subject" type="text" placeholder="Enter your subject">
+
+                <br>
+
+                <label for="">Message</label>
+                <textarea class="message" name="" id="" placeholder="Write your message here."></textarea>
+            </div>
+            <div class="button-container">
+                <button class="send-btn">Send Message</button>
+            </div>
+
+            
+        </div>
+    </div>
+    <script>
+        const sendbtn = document.querySelector('.send-btn');
+
+        sendbtn.addEventListener('click', function() {
+            const nameInput = document.querySelector('.item input[placeholder="Enter your name"]');
+            const emailInput = document.querySelectorAll('.item input[placeholder="Enter your name"]')[1];
+            const subjectInput = document.querySelector('.subject');
+            const messageInput = document.querySelector('.message');
+
+            const name = nameInput.value;
+            const email = emailInput.value;
+            const subject = subjectInput.value;
+            const message = messageInput.value;
+
+            if (name && email && subject && message) {
+                alert(`Thank you, ${name}! Your message has been sent successfully.`);
+
+                // Clear all fields
+                nameInput.value = '';
+                emailInput.value = '';
+                subjectInput.value = '';
+                messageInput.value = '';
+
+                // You can add an actual message-sending logic here
+            } else {
+                alert('Please fill in all fields before sending your message.');
+            }
+        });
+    </script>
+</body>
+</html>
